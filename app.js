@@ -35,6 +35,8 @@ function displayResults(data) {
   const resultDiv = document.getElementById("results");
   resultDiv.innerHTML = "";
 
+  resultDiv.classList.add("resultDiv");
+
   if (data.articles.length === 0) {
     resultDiv.innerHTML = "<p>No articles found.</p>";
     return;
@@ -54,6 +56,8 @@ function displayResults(data) {
 
     const title = document.createElement("h2");
     title.textContent = article.title;
+
+    title.classList.add("articleHeading");
 
     const para = document.createElement("p");
     para.textContent = article.description;
